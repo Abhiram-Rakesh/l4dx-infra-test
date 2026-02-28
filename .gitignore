@@ -1,0 +1,4 @@
+# Terraform local artifacts (keep .terraform.lock.hcl committed)
+**/.terraform/*
+**/tfplan
+**/tfplan.*
