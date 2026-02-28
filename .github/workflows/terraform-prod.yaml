@@ -16,7 +16,7 @@ permissions:
 env:
   AWS_REGION: ap-south-1
   TF_BUCKET: tf-l4dx-infra-test-state-8e13149f
-  TF_LOCK_TABLE: tf-l4dx-infra-test-statelock-40625640
+  TF_LOCK_TABLE: arn:aws:dynamodb:ap-south-1:144711568538:table/tf-l4dx-infra-test-statelock-40625640
   TF_STATE_KEY: prod/terraform.tfstate
 
 jobs:
