@@ -16,7 +16,8 @@ permissions:
 env:
   AWS_REGION: ap-south-1
   TF_BUCKET: tf-l4dx-infra-test-state-8e13149f
-  TF_LOCK_TABLE: tf-l4dx-infra-test-statelock-40625640
+  TF_LOCK_TABLE: arn:aws:dynamodb:ap-south-1:144711568538:table/tf-l4dx-infra-test-statelock-40625640
+  TF_KMS_KEY_ID: arn:aws:kms:ap-south-1:144711568538:key/1d92e524-0357-4b48-893c-97c7ba8465fb
   TF_STATE_KEY: prod/terraform.tfstate
 
 jobs:
@@ -59,6 +60,7 @@ jobs:
             -backend-config="key=${{ env.TF_STATE_KEY }}" \
             -backend-config="region=${{ env.AWS_REGION }}" \
             -backend-config="dynamodb_table=${{ env.TF_LOCK_TABLE }}" \
+            -backend-config="kms_key_id=${{ env.TF_KMS_KEY_ID }}" \
             -backend-config="encrypt=true"
 
       - name: Terraform Validate
