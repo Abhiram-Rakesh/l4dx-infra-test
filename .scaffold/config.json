@@ -6,7 +6,7 @@
     "s3_bucket": "tf-l4dx-infra-test-state-8e13149f",
     "dynamodb_table": "tf-l4dx-infra-test-statelock-40625640",
     "kms_key_id": "1d92e524-0357-4b48-893c-97c7ba8465fb",
-    "created_at": "2026-02-28T08:35:40Z",
+    "created_at": "2026-02-28T09:14:02Z",
     "created_by": ""
   },
   "repository": {
@@ -15,18 +15,6 @@
     "default_branch": "main"
   },
   "environments": [
-    {
-      "name": "prod",
-      "account_id": "696192989304",
-      "region": "ap-south-1",
-      "watch_directory": "prod",
-      "trigger_branch": "main",
-      "iam_role_arn": "arn:aws:iam::696192989304:role/github-actions-prod",
-      "state_key": "prod/terraform.tfstate",
-      "workflow_file": ".github/workflows/terraform-prod.yaml",
-      "created_at": "",
-      "policy_mode": "inline"
-    },
     {
       "name": "logging",
       "account_id": "102493261417",
